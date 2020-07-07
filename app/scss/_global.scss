@@ -11,6 +11,7 @@ html {
 a {
     display: inline-block;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 ul,
@@ -18,10 +19,46 @@ li {
     margin: 0;
     padding: 0;
     list-style: none;
+
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+body {
+    font-family: 'Quicksand',
+        sans-serif;
+}
+
+.btn {
+    margin-left: auto;
+    border: none;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    background-color: $bg-blue;
+    border: 1px solid $bg-blue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: white;
+        color: $bg-blue;
+        border: 1px solid $bg-blue;
+    }
+
+    &:active {
+        box-shadow: 0px 0px 9px -1px $bg-blue inset;
+    }
+
+    &:focus {
+        outline-style: inherit;
+        border: 1px solid #fff;
+    }
 }
