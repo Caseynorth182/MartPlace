@@ -60,3 +60,15 @@ body {
         border: 1px solid #fff;
     }
 }
+
+.rate-star {
+    display: inline-block;
+
+    &--slider {
+        margin-left: auto;
+    }
+
+    &--tab {
+        margin-right: auto;
+    }
+}

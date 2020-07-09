@@ -92,10 +92,10 @@
             <div class="container">
                 <form class="subpromo-form" action="#">
                     <input class="subpromo-form__input" type="text" name="input" placeholder="Search your products...">
-                    <select name="dropdown" class="subpromo-form__dropdown dropdown">
-                        <option class="dropdown__item dropdown__item--first">All Categories</option>
-                        <option class="dropdown__item dropdown__item--second">All Categories</option>
-                        <option class="dropdown__item dropdown__item--third">All Categories</option>
+                    <select name="dropdown" class="subpromo-form__dropdown-select ">
+                        <option class="dropdown-select dropdown__item dropdown__item--first">All Categories</option>
+                        <option class="dropdown-select dropdown__item dropdown__item--second">All Categories</option>
+                        <option class="dropdown-select dropdown__item dropdown__item--third">All Categories</option>
                     </select>
 
                     <button class="subpromo-form__btn btn" type="submit">Search Now</button>
@@ -174,7 +174,7 @@
                                         <a class="card__buy-btn btn" href="#">$10 - $50</a>
                                         <a class="card__like" href="#"><span class="lnr lnr-heart"></span></a>
                                         <a class="card__cart" href="#"><span class="lnr lnr-cart"></span></a>
-
+                                        <div class="rate-star rate-star--slider">5</div>
                                     </div>
 
                                 </div>
@@ -213,6 +213,7 @@
                                         <a class="card__buy-btn btn" href="#">$10 - $50</a>
                                         <a class="card__like" href="#"><span class="lnr lnr-heart"></span></a>
                                         <a class="card__cart" href="#"><span class="lnr lnr-cart"></span></a>
+                                        <div class="rate-star">5</div>
 
                                     </div>
 
@@ -227,8 +228,8 @@
         <section class="products">
             <div class="container">
                 <div class="product__inner">
-                    <div class="title-block">
-                        <div class="title-block__text">Newest Release Products</div>
+                    <div class="title-block title-block--tab">
+                        <div class="title-block__text title-block__text--tab">Newest Release Products</div>
                         <button class="title-block__btn">Filter by:</button>
                         <ul class="dropdown">
                             <li class="dropdown__item"><a class="dropdown__link" href="#">Trending items</a></li>
@@ -241,21 +242,21 @@
 
                     <div class="product-tab">
                         <div class="product-box">
-                            <button class="product-box__btn" type="button"
+                            <button class="product-box__btn btn" type="button"
                                 data-filter=".category-plugins">Plugins</button>
-                            <button class="product-box__btn" type="button"
+                            <button class="product-box__btn btn" type="button"
                                 data-filter=".category-wordpress">Wordpress</button>
-                            <button class="product-box__btn" type="button" data-filter=".category-template">Site
+                            <button class="product-box__btn btn" type="button" data-filter=".category-template">Site
                                 Template</button>
-                            <button class="product-box__btn" type="button" data-filter=".category-psd">PSD
+                            <button class="product-box__btn btn" type="button" data-filter=".category-psd">PSD
                                 Template</button>
-                            <button class="product-box__btn" type="button"
+                            <button class="product-box__btn btn" type="button"
                                 data-filter=".category-joomla">Joomla</button>
-                            <button class="product-box__btn" type="button" data-filter=".category-user">User
+                            <button class="product-box__btn btn" type="button" data-filter=".category-user">User
                                 Interface</button>
-                            <button class="product-box__btn" type="button" data-filter=".category-landing">Landing
+                            <button class="product-box__btn btn" type="button" data-filter=".category-landing">Landing
                                 Page</button>
-                            <button class="product-box__btn" type="button"
+                            <button class="product-box__btn btn" type="button"
                                 data-filter=".category-software">Software</button>
                         </div>
                     </div>
@@ -305,15 +306,15 @@
                             </div>
                             <div class="product-card__content">
                                 <div class="product-card__content-main">
-                                    <div class="product-card__title">E-commerce Shopping Cart</div>
+                                    <div class="product-card__title">Marketify Coffee Shop</div>
                                     <div class="product-card__user">
                                         <a class="user__avatar" href="#"
                                             style="background-image: url(img/tempSlider/avatar/1.jpg);">
                                         </a>
-                                        <a class="user__name" href="#">Theme-Valley</a>
+                                        <a class="user__name" href="#">EchoTheme</a>
                                         <i class="user__icon user__icon--psd"
                                             style="background-image: url(img/icons/psd.svg);"></i>
-                                        <a class="user__tech" href="#">plugin</a>
+                                        <a class="user__tech" href="#">PSD</a>
                                     </div>
                                     <p class="product-card__text">Nunc placerat mi id nisi interdum mollis. Praesent
                                         pharetra, justo ut scelerisque
@@ -340,15 +341,15 @@
                             </div>
                             <div class="product-card__content">
                                 <div class="product-card__content-main">
-                                    <div class="product-card__title">E-commerce Shopping Cart</div>
+                                    <div class="product-card__title">Bryson - Portfolio Template</div>
                                     <div class="product-card__user">
                                         <a class="user__avatar" href="#"
                                             style="background-image: url(img/tempSlider/avatar/1.jpg);">
                                         </a>
-                                        <a class="user__name" href="#">Theme-Valley</a>
+                                        <a class="user__name" href="#">Artcorner</a>
                                         <i class="user__icon user__icon--html"
                                             style="background-image: url(img/icons/html5.svg);"></i>
-                                        <a class="user__tech" href="#">plugin</a>
+                                        <a class="user__tech" href="#">HTML</a>
                                     </div>
                                     <p class="product-card__text">Nunc placerat mi id nisi interdum mollis. Praesent
                                         pharetra, justo ut scelerisque
@@ -358,6 +359,7 @@
                                 <div class="product-card__content-footer">
                                     <a class="product-card__buy-btn btn product-card__btn" href="#">$20</a>
                                     <a class="product-card__like" href="#"><span class="lnr lnr-heart"></span></a>
+                                    <div class="rate-star rate-star--tab">5</div>
                                     <a class="product-card__cart" href="#"><span class="lnr lnr-cart"></span></a>
                                 </div>
 
@@ -380,7 +382,7 @@
                                         <a class="user__avatar" href="#"
                                             style="background-image: url(img/tempSlider/avatar/1.jpg);">
                                         </a>
-                                        <a class="user__name" href="#">Theme-Valley</a>
+                                        <a class="user__name" href="#">Design-Hub</a>
                                         <i class="user__icon user__icon--wordpress"
                                             style="background-image: url(img/icons/wordpress.svg);"></i>
                                         <a class="user__tech" href="#">plugin</a>
@@ -393,6 +395,7 @@
                                 <div class="product-card__content-footer">
                                     <a class="product-card__buy-btn btn product-card__btn" href="#">$20</a>
                                     <a class="product-card__like" href="#"><span class="lnr lnr-heart"></span></a>
+                                    <div class="rate-star rate-star--tab">5</div>
                                     <a class="product-card__cart" href="#"><span class="lnr lnr-cart"></span></a>
                                 </div>
 
@@ -410,15 +413,15 @@
                             </div>
                             <div class="product-card__content">
                                 <div class="product-card__content-main">
-                                    <div class="product-card__title">E-commerce Shopping Cart</div>
+                                    <div class="product-card__title">Marketify Coffee Shop</div>
                                     <div class="product-card__user">
                                         <a class="user__avatar" href="#"
                                             style="background-image: url(img/tempSlider/avatar/1.jpg);">
                                         </a>
-                                        <a class="user__name" href="#">Theme-Valley</a>
+                                        <a class="user__name" href="#">AazzTech</a>
                                         <i class="user__icon user__icon--psd"
                                             style="background-image: url(img/icons/psd.svg);"></i>
-                                        <a class="user__tech" href="#">plugin</a>
+                                        <a class="user__tech" href="#">PSD</a>
                                     </div>
                                     <p class="product-card__text">Nunc placerat mi id nisi interdum mollis. Praesent
                                         pharetra, justo ut scelerisque
@@ -446,7 +449,7 @@
                             </div>
                             <div class="product-card__content">
                                 <div class="product-card__content-main">
-                                    <div class="product-card__title">E-commerce Shopping Cart</div>
+                                    <div class="product-card__title">Bryson - Portfolio Template</div>
                                     <div class="product-card__user">
                                         <a class="user__avatar" href="#"
                                             style="background-image: url(img/tempSlider/avatar/1.jpg);">
@@ -454,7 +457,7 @@
                                         <a class="user__name" href="#">Theme-Valley</a>
                                         <i class="user__icon user__icon--html"
                                             style="background-image: url(img/icons/html5.svg);"></i>
-                                        <a class="user__tech" href="#">plugin</a>
+                                        <a class="user__tech" href="#">HTML</a>
                                     </div>
                                     <p class="product-card__text">Nunc placerat mi id nisi interdum mollis. Praesent
                                         pharetra, justo ut scelerisque
@@ -464,6 +467,7 @@
                                 <div class="product-card__content-footer">
                                     <a class="product-card__buy-btn btn product-card__btn" href="#">$20</a>
                                     <a class="product-card__like" href="#"><span class="lnr lnr-heart"></span></a>
+                                    <div class="rate-star rate-star--tab ">5</div>
                                     <a class="product-card__cart" href="#"><span class="lnr lnr-cart"></span></a>
                                 </div>
                             </div>
