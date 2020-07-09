@@ -232,11 +232,16 @@
                         <div class="title-block__text title-block__text--tab">Newest Release Products</div>
                         <button class="title-block__btn">Filter by:</button>
                         <ul class="dropdown">
-                            <li class="dropdown__item"><a class="dropdown__link" href="#">Trending items</a></li>
-                            <li class="dropdown__item"><a class="dropdown__link" href="#">Best seller</a></li>
-                            <li class="dropdown__item"><a class="dropdown__link" href="#">Best rating</a></li>
-                            <li class="dropdown__item"><a class="dropdown__link" href="#">Low price</a></li>
-                            <li class="dropdown__item"><a class="dropdown__link" href="#">High price</a></li>
+                            <li class="dropdown__item"><button class="dropdown__link" type="button"
+                                    data-sort="random">Tranding items</button></li>
+                            <li class="dropdown__item"><button class="dropdown__link" type="button"
+                                    data-filter=".category-bestseller">Best seller</button></li>
+                            <li class="dropdown__item"><button class="dropdown__link" type="button"
+                                    data-filter=".category-bestrating">Best rating</button></li>
+                            <li class="dropdown__item"><button class="dropdown__link" type="button"
+                                    data-filter=".category-low">Low price</button></li>
+                            <li class="dropdown__item"><button class="dropdown__link" type="button"
+                                    data-filter=".category-high">High price</button></li>
                         </ul>
                     </div>
 
@@ -261,7 +266,8 @@
                         </div>
                     </div>
                     <div class="product-card ">
-                        <div class="product-card__item mix category-wordpress mix category-plugins">
+                        <div
+                            class="product-card__item mix category-wordpress mix category-plugins category-bestseller category-low">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/4.jpg" alt="cat">
                                 <div class="product-card__buttons">
@@ -296,7 +302,7 @@
 
                         </div>
 
-                        <div class="product-card__item mix category-psd mix category-user ">
+                        <div class="product-card__item mix category-psd mix category-user category-bestrating ">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/1.jpg" alt="cat">
                                 <div class="product-card__buttons">
@@ -331,7 +337,8 @@
 
                         </div>
 
-                        <div class="product-card__item mix category-psd mix category-site ">
+                        <div
+                            class="product-card__item mix category-psd mix category-site category-bestseller category-low">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/2.jpg" alt="cat">
                                 <div class="product-card__buttons">
@@ -367,7 +374,8 @@
 
                         </div>
 
-                        <div class="product-card__item mix category-site mix category-wordpress mix category-plugins">
+                        <div
+                            class="product-card__item mix category-site mix category-wordpress mix category-plugins category-low">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/3.jpg" alt="cat">
                                 <div class="product-card__buttons">
@@ -403,7 +411,8 @@
 
                         </div>
 
-                        <div class="product-card__item mix category-site mix category-wordpress mix-category-landing">
+                        <div
+                            class="product-card__item mix category-site mix category-wordpress mix-category-landing category-bestseller category-bestrating">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/4.jpg" alt="cat">
                                 <div class="product-card__buttons">
@@ -439,7 +448,7 @@
                         </div>
 
                         <div
-                            class="product-card__item mix category-wordpress mix category-landing mix category-plugins">
+                            class="product-card__item mix category-wordpress mix category-landing mix category-plugins category-bestrating">
                             <div class="product-card__top">
                                 <img class="product-card__img" src="img/products/5.jpg" alt="cat">
                                 <div class="product-card__buttons">

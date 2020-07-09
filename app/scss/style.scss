@@ -609,7 +609,10 @@
 
     }
 }
-
+.mixitup-control-active {
+    border: none;
+    background-color: transparent;
+}
 .dropdown {
     display: none;
     position: absolute;
@@ -640,8 +643,12 @@
         box-shadow: 0 5px 40px rgba(82, 85, 90, 0.2);
 
     }
+    
 
     &__link {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
         &:hover {
             color: $bg-blue;
         }
