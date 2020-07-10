@@ -36,7 +36,7 @@ body {
 .btn {
     border: none;
     padding: 12px 18px;
-    font-weight: 400;
+    @include f400;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
     background-color: $bg-blue;
@@ -58,6 +58,30 @@ body {
     &:focus {
         outline-style: inherit;
         border: 1px solid #fff;
+    }
+}
+
+.link-btn {
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 28px;
+    font-size: 15px;
+    color: #fff;
+    @include f400;
+    padding: 17px 32px;
+
+    &:hover {
+        background-color: #fff;
+        color: $bg-blue;
+    }
+
+    &:active {
+        box-shadow: 0px 0px 9px -1px $bg-blue inset;
+    }
+
+    &:focus {
+        outline-style: inherit;
+        border: 1px solid $bg-blue;
     }
 }
 

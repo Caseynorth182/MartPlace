@@ -2,7 +2,9 @@ $(function () {
     //slick slider
     $('.slider-inner').slick({
         prevArrow: "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
-        nextArrow: "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>"
+        nextArrow: "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
+        autoplay: true,
+        autoplaySpeed: 2000,
     })
 
     // MixitUp 
