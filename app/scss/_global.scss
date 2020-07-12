@@ -9,17 +9,12 @@ html {
 }
 
 a {
-    display: inline-block;
     text-decoration: none;
-    transition: all 0.3s;
+
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+.transition {
+    transition: all 0.3s;
 }
 
 .container {
@@ -83,6 +78,11 @@ body {
         outline-style: inherit;
         border: 1px solid $bg-blue;
     }
+}
+
+.user__avatar {
+    width: 30px;
+    height: 30px;
 }
 
 .rate-star {

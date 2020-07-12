@@ -8,7 +8,10 @@ $(function () {
     })
 
     // MixitUp 
-    var mixer = mixitup('.product__inner');
+    if ($('.products__block').length) {
+        var mixer = mixitup('.product__inner');
+    }
+
 
     //dropdown menu toggle
     $('.title-block__btn').on('click', function () {
