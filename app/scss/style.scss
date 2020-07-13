@@ -995,28 +995,28 @@
 /* -------------------------------------------------------------------------- */
 .benefits {
     padding: 120px 0;
+}
 
-    &__title {
-        color: $text-color--dark;
-        font-size: 36px;
-        @include f400;
-        text-align: center;
+.title {
+    color: $text-color--dark;
+    font-size: 36px;
+    @include f400;
+    text-align: center;
 
-        span {
-            color: $bg-blue;
-        }
+    &__highlight {
+        color: $bg-blue;
     }
+}
 
-    &__subtitle {
-        margin: 0 auto;
-        max-width: 680px;
-        padding: 22px 0 60px 0;
-        @include f400;
-        line-height: 30px;
-        font-size: 16px;
-        color: $card-text;
-        text-align: center;
-    }
+.subtitle {
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 22px 0 60px 0;
+    @include f400;
+    line-height: 30px;
+    font-size: 16px;
+    color: $card-text;
+    text-align: center;
 }
 
 .card-grid {
@@ -1138,4 +1138,138 @@
         font-size: 16px;
         line-height: 30px;
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                trade section                               */
+/* -------------------------------------------------------------------------- */
+.trade {
+    &__inner {
+        display: flex;
+        width: 100%;
+        min-height: 561px;
+        color: rgb(255, 255, 255);
+        @include f400;
+    }
+
+    &__item {
+        max-width: 586px;
+        width: 100%;
+        min-height: 363px;
+    }
+
+    &__title {
+        font-size: 36px;
+        padding: 41px 0 18px 0px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    &__link {
+        padding: 19px 26px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 28px;
+        background-color: rgb(255, 255, 255);
+        color: $bg-blue;
+        font-size: 16px;
+    }
+}
+
+.trade-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--sell {
+        background-image: url(../img/trade/1.jpg);
+    }
+
+    &--buy {
+        background-image: url(../img/trade/2.jpg);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               client Feedback                              */
+/* -------------------------------------------------------------------------- */
+.feedback {
+    padding: 120px 0;
+}
+
+.feedback-card {
+    display: flex;
+    justify-content: space-between;
+
+    &__item+.feedback-card__item {
+        margin-right: -11px;
+    }
+
+    &__item {
+        position: relative;
+        max-width: 555px;
+        width: 100%;
+        padding: 50px 40px;
+        box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+        background-color: rgb(255, 255, 255);
+        border-left: 1px solid $bg-blue;
+        @include f400;
+        font-size: 16px;
+        color: $card-text;
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/feedback/bubble.svg);
+            top: 45px;
+            right: 34px;
+            width: 67px;
+            height: 61px;
+        }
+
+    }
+}
+
+.account-feedback {
+    display: flex;
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin-right: 19px;
+    }
+
+    &__account {
+        font-size: 20px;
+        word-spacing: 19px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__name {
+        padding-bottom: 14px;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+    }
+
+    &__descr {
+        padding-top: 16px;
+        line-height: 30px;
+    }
+
 }
