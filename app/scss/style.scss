@@ -10,7 +10,7 @@
 }
 
 .header-logo {
-    margin-left: 10px;
+    margin-left: 7px;
 }
 
 .header-top {
@@ -18,7 +18,7 @@
 
     &__btn {
         margin-left: auto;
-        margin-right: 50px;
+        margin-right: 51px;
         padding: 10px 15px;
         font-size: 14px;
         @include f400;
@@ -30,6 +30,7 @@
     @include f400;
     color: $icon-color;
     position: relative;
+    margin-left: auto;
 
     &::after {
         content: "";
@@ -72,10 +73,10 @@
 .account {
     display: flex;
     align-items: center;
-    margin-left: 48px;
+    margin-left: 46px;
 
     &__text {
-        margin-left: 22px;
+        margin-left: 16px;
         display: block;
         font-size: 16px;
         @include f500;
@@ -120,14 +121,24 @@
 }
 
 .menu {
+    max-width: 497px;
+    width: 100%;
+
     &__list {
+        max-width: 497px;
+        width: 100%;
+        padding: 0;
         display: flex;
         justify-content: space-between;
         color: $text-color--dark;
         font-size: 15px;
         @include f500;
-        line-height: 42px;
         text-transform: uppercase;
+        word-spacing: 1px;
+    }
+
+    &__item+.menu__item {
+        margin-left: 10px;
     }
 
     &__link {
@@ -139,18 +150,17 @@
     }
 }
 
-
 .menu__item {
     list-style-type: none;
 
     &+.menu__item {
         margin-left: 30px;
     }
-
 }
 
 .header-form {
-    min-width: 360px;
+    max-width: 353px;
+    width: 100%;
     position: relative;
 
     &__search {
@@ -159,6 +169,10 @@
         border-radius: 23px;
         padding: 0 75px 0 25px;
         border: 1px solid rgb(217, 223, 229);
+
+        &::placeholder {
+            word-spacing: -3px;
+        }
 
         &:focus {
             border: 1px solid $bg-blue;
@@ -172,7 +186,7 @@
         border: 1px solid $bg-blue;
         font-size: 0;
         background-color: $bg-blue;
-        padding: 15px 26px;
+        padding: 14px 22px;
         border-radius: 23px;
         cursor: pointer;
         transition: all 0.3s;
@@ -207,31 +221,31 @@
     min-height: 726px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 60px;
+    justify-content: start;
+    align-items: center;
+    padding-top: 176px;
     text-align: center;
     color: $bg-grey;
 
     &__title {
         font-size: 60px;
         @include f400;
-        padding-top: 10px;
+        /* padding-top: 10px; */
     }
 
     &__subtitle {
         font-size: 60px;
         @include f700;
-        padding-bottom: 38px;
+        margin-bottom: 32px;
     }
 
     &__descr {
         font-size: 20px;
         @include f500;
-        padding-bottom: 40px;
     }
 
     &__links {
-        padding-top: 25px;
+        margin-top: 88px;
     }
 
     &__btn {
@@ -241,10 +255,10 @@
         border-radius: 28px;
         font-size: 16px;
         @include f400;
-        padding: 20px 32px;
+        padding: 17px 30px;
 
         &+.promo-inner__btn {
-            margin-left: 30px;
+            margin-left: 25px;
         }
     }
 }
@@ -257,8 +271,6 @@
     max-height: 710px;
     min-width: 100%;
 }
-
-
 
 .subpromo-form {
     min-width: 100%;
@@ -294,7 +306,7 @@
 
     &__dropdown-select {
         display: inline-block;
-        padding: 12px 73px 13px 20px;
+        padding: 12px 46px 13px 17px;
         color: $card-text;
         font-size: 16px;
         @include f400;
@@ -304,14 +316,13 @@
         cursor: pointer;
     }
 
-
     &__input {
         min-height: 55px;
         width: 100%;
         border: 1px solid $bg-grey;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        padding: 20px 30px;
+        padding: 20px 26px;
 
         &::placeholder {
             color: $card-text;
@@ -321,7 +332,7 @@
     }
 
     &__btn {
-        min-width: 223px;
+        min-width: 217px;
         border-radius: 4px;
         margin-left: 30px;
         color: rgb(255, 255, 255);
@@ -336,10 +347,14 @@
     padding: 50px 0 120px;
 }
 
+.subpromo-card+.subpromo-card {
+    margin-left: 27px;
+}
+
 .subpromo-card {
     min-width: 361px;
     max-height: 403px;
-    padding: 41px 35px 49px 41px;
+    padding: 41px 35px 49px 31px;
     text-align: center;
     transition: all 0.3s;
 
@@ -359,7 +374,6 @@
         @include f500;
         font-size: 25px;
         padding: 29px 0 21px;
-        line-height: 7.2px;
     }
 
     &__text {
@@ -370,9 +384,6 @@
         line-height: 30px;
     }
 }
-
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                               Template_slider                              */
@@ -389,7 +400,7 @@
 .slider-wrapper {
     margin: 0 auto;
     min-height: 850px;
-    padding: 130px 0;
+    padding: 156px 0 87px 0;
     position: relative;
 }
 
@@ -398,12 +409,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
-    padding: 0px 26px 0 20px;
+    height: 101px;
+    padding: 0px 26px 0px 28px;
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 
     &__text {
         color: rgb(0, 0, 0);
@@ -433,7 +444,6 @@
             background-color: #0674ec;
         }
     }
-
 }
 
 /*Slider Arrows*/
@@ -508,7 +518,7 @@
 
     &__content {
         max-width: 585px;
-        padding: 27px 30px 20px 43px;
+        padding: 16px 30px 20px 43px;
     }
 
     &__title {
@@ -669,7 +679,7 @@
 /*                               Product section                              */
 /* -------------------------------------------------------------------------- */
 .products {
-    padding: 120px 0;
+    padding: 107px 0;
     background-color: rgb(246, 247, 251);
 }
 
@@ -679,7 +689,7 @@
         line-height: 28px;
         position: relative;
         height: 100px;
-        margin-bottom: 25px;
+        margin-bottom: 31px;
     }
 
     &__btn {
@@ -810,6 +820,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -861,14 +873,18 @@
     }
 
     &__content {
-        padding-top: 35px;
+        padding-top: 36px;
         box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
         border-radius: 4px;
         background-color: rgb(255, 255, 255);
+
+        &--news {
+            padding-top: 22px;
+        }
     }
 
     &__content-main {
-        padding: 0 39px 0 30px;
+        padding: 0 21px 0 30px;
     }
 
     &__title {
@@ -877,6 +893,12 @@
         @include f500;
         line-height: 7.2px;
         padding-bottom: 7px;
+
+        &--news-card {
+            font-size: 22px;
+            line-height: 28px;
+            padding-bottom: 22px;
+        }
     }
 
     &__user {
@@ -892,6 +914,10 @@
         @include f400;
         line-height: 30px;
         padding-bottom: 34px;
+
+        &--news-card {
+            padding-bottom: 22px;
+        }
     }
 
     &__content-footer {
@@ -948,13 +974,18 @@
 /*                                score section                               */
 /* -------------------------------------------------------------------------- */
 .score {
-    padding: 95px 0;
+    min-height: 350px;
+    padding: 96px 0 10px 0;
     background-color: rgba(13, 15, 19, 0.8);
 
     &__inner {
         display: flex;
         justify-content: space-between;
         @include f400;
+    }
+
+    &__item+.score__item {
+        margin-right: -17px;
     }
 
     &__item {
@@ -979,9 +1010,9 @@
     }
 
     &__num {
-        margin-top: 52px;
+        margin-top: 32px;
         font-size: 36px;
-        padding-bottom: 22px;
+        padding-bottom: 13px;
     }
 
     &__descr {
@@ -994,7 +1025,7 @@
 /*                                  benefits                                  */
 /* -------------------------------------------------------------------------- */
 .benefits {
-    padding: 120px 0;
+    padding: 117px 0 83px 0;
 }
 
 .title {
@@ -1011,7 +1042,7 @@
 .subtitle {
     margin: 0 auto;
     max-width: 680px;
-    padding: 22px 0 60px 0;
+    padding: 19px 0px 60px 6px;
     @include f400;
     line-height: 30px;
     font-size: 16px;
@@ -1059,7 +1090,7 @@
 
         span {
             font-size: 60px;
-            padding-bottom: 40px;
+            padding-bottom: 38px;
         }
 
         &--payment {
@@ -1167,23 +1198,32 @@
         font-size: 16px;
         line-height: 30px;
         margin: 0;
-        padding-bottom: 50px;
+        padding-bottom: 63px;
     }
 
     &__link {
-        padding: 19px 26px;
+        padding: 17px 26px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         border-radius: 28px;
         background-color: rgb(255, 255, 255);
         color: $bg-blue;
         font-size: 16px;
+        margin-top: 25px;
+
+        &:hover {
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
     }
+
+
 }
 
 .trade-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     flex: 1 1 50%;
     text-align: center;
     background-position: center center;
@@ -1203,7 +1243,18 @@
 /*                               client Feedback                              */
 /* -------------------------------------------------------------------------- */
 .feedback {
-    padding: 120px 0;
+    padding: 111px 0 120px 0;
+
+    &__btn {
+        max-width: 186px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 25px;
+        margin-top: 54px;
+        padding: 17px 0;
+    }
 }
 
 .feedback-card {
@@ -1236,7 +1287,6 @@
             width: 67px;
             height: 61px;
         }
-
     }
 }
 
@@ -1271,5 +1321,422 @@
         padding-top: 16px;
         line-height: 30px;
     }
+}
 
+/* -------------------------------------------------------------------------- */
+/*                                NEWS section                                */
+/* -------------------------------------------------------------------------- */
+.news {
+    padding: 111px 0 38px 0;
+    background-color: $bg-grey;
+}
+
+.news-inner {
+    display: flex;
+    justify-content: space-between;
+
+    &__item+.news-inner__item {
+        margin-right: -5px;
+    }
+
+    &__time {
+        position: relative;
+        color: $icon-color;
+        font-size: 15px;
+        @include f400;
+        padding: 13px 47px 13px 29px;
+        border-right: 1px solid $bg-grey;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/news/clock.svg);
+            width: 16px;
+            height: 15px;
+            top: 13px;
+            left: 0;
+        }
+    }
+
+    &__comment {
+        position: relative;
+        padding: 0 15px 0 15px;
+        font-size: 15px;
+        margin-right: auto;
+        margin-left: 10px;
+
+        &:before {
+            content: "45";
+            position: absolute;
+            top: 0;
+            right: -8px;
+        }
+    }
+
+    &__visit {
+        margin-right: 25px;
+        position: relative;
+        padding-right: 10px;
+        font-size: 15px;
+
+        &:before {
+            content: "345";
+            position: absolute;
+            top: 0;
+            right: -21px;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             quick-info section                             */
+/* -------------------------------------------------------------------------- */
+.quick-info {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex: 1 1 50%;
+        min-height: 297px;
+
+        &--guarantee {
+            border-right: 1px solid $bg-grey;
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 360px;
+        min-height: 297px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        @include f400;
+        margin: 0 auto;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__highlight {
+        color: $bg-blue;
+
+        &--support {
+            color: rgb(115, 71, 193);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                JOIN section                                */
+/* -------------------------------------------------------------------------- */
+.join {
+    padding: 96px 0 110px 0;
+    min-height: 400px;
+    max-width: 100%;
+    background-color: rgba(21, 26, 32, 0.9);
+    background-image: linear-gradient(to left, rgb(13, 62, 242) 0%, rgb(114, 33, 160) 100%);
+    margin: 0 auto;
+    @include f400;
+    text-align: center;
+
+    &__title {
+        font-size: 36px;
+        color: rgb(255, 255, 255);
+        padding-bottom: 23px;
+    }
+
+    &__subtitle {
+        color: $bg-grey;
+        font-size: 18px;
+        padding-bottom: 70px;
+    }
+
+    &__link {
+        padding: 18px 41px;
+        font-size: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 28px;
+        background-color: rgb(255, 255, 255);
+        color: $bg-blue;
+        border: none;
+
+        &:hover {
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 footer-top                                 */
+/* -------------------------------------------------------------------------- */
+.footer-top {
+    min-height: 525px;
+    background-color: rgb(38, 43, 48);
+    padding: 115px 0 90px;
+    @include f400;
+    font-size: 15px;
+    color: rgb(171, 171, 171);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        line-height: 42px;
+        letter-spacing: 0.9px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-top: 15px;
+    }
+
+    &__link {
+        color: rgb(171, 171, 171);
+        font-size: 15px;
+        line-height: 32px;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+.addres {
+    max-width: 262px;
+    width: 100%;
+    margin-right: 18px;
+
+    &__img {
+        transform: translate(0, -6px);
+        margin-left: 1px;
+    }
+
+    &__text {
+        line-height: 29px;
+        margin-top: 17px;
+        padding: 0 0 8px 0;
+    }
+
+    &__phone,
+    .addres__email,
+    .addres__location {
+        color: rgb(171, 171, 171);
+        display: block;
+        padding-left: 30px;
+        margin-bottom: 17px;
+        position: relative;
+
+        &:hover {
+            color: $yellow;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+        }
+    }
+
+    &__phone {
+        &:before {
+            background-image: url(../img/footer/phone.svg);
+        }
+    }
+
+    &__email {
+        &:before {
+            background-image: url(../img/footer/mail.svg);
+        }
+    }
+
+    &__location {
+        line-height: 26px;
+        margin-top: 15px;
+
+        &:before {
+            background-image: url(../img/footer/map.svg);
+            bottom: 35%;
+        }
+    }
+}
+
+.about {
+    max-width: 130px;
+    width: 100%;
+}
+
+.column+.column {
+    margin-left: 55px;
+}
+
+.social {
+    max-width: 360px;
+    widows: 100%;
+    margin-left: -4px;
+
+    &__item+.social__item {
+        margin-left: 14px;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 48px;
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        background: red;
+        font-size: 0;
+
+        &:hover {
+            box-shadow: 0px 0px 21px 1px #fff;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+
+        }
+
+        &--facebook {
+            background-color: rgb(57, 87, 153);
+
+            &:before {
+                background-image: url(../img/footer/social/facebook.svg);
+                width: 9px;
+                height: 16px;
+            }
+        }
+
+        &--twitter {
+            background-color: rgb(25, 178, 245);
+
+            &:before {
+                background-image: url(../img/footer/social/twitter.svg);
+                width: 15px;
+                height: 13px;
+            }
+        }
+
+        &--google {
+            background-color: rgb(240, 91, 68);
+
+            &:before {
+                background-image: url(../img/footer/social/google.svg);
+                width: 14px;
+                height: 15px;
+            }
+        }
+
+        &--pinterest {
+            background-color: rgb(156, 12, 28);
+
+            &:before {
+                background-image: url(../img/footer/social/pinterest.svg);
+                width: 15px;
+                height: 13px;
+            }
+        }
+
+        &--linkid {
+            background-color: rgb(13, 166, 190);
+
+            &:before {
+                background-image: url(../img/footer/social/link.svg);
+                width: 13px;
+                height: 14px;
+            }
+        }
+
+        &--dribbble {
+            background-color: rgb(234, 76, 137);
+
+            &:before {
+                background-image: url(../img/footer/social/dribbble.svg);
+                width: 15px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.footer-form {
+    position: relative;
+    margin-top: 19px;
+    margin-left: 4px;
+
+    &__input {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 120px 20px 30px;
+        border-radius: 35px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+
+        &::placeholder {
+            color: $icon-color;
+            font-size: 15px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 19px 28px;
+        border-radius: 27px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               //footer-bottom                              */
+/* -------------------------------------------------------------------------- */
+.footer-bottom {
+    min-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(25, 32, 39);
+    text-align: center;
+    padding: 32px 0 47px 0;
+    color: rgb(153, 153, 153);
+    font-size: 15px;
+    @include f400;
+    word-spacing: 1px;
+
+    &__link {
+        color: rgb(255, 255, 255);
+
+        &:hover {
+            color: $yellow;
+        }
+    }
 }
