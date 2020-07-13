@@ -387,6 +387,7 @@
 }
 
 .slider-wrapper {
+    margin: 0 auto;
     min-height: 850px;
     padding: 130px 0;
     position: relative;
@@ -454,7 +455,8 @@
 }
 
 .card {
-    max-width: 1120px;
+    max-width: 1130px;
+    width: 100%;
     max-height: 450px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -932,3 +934,208 @@
 /* -------------------------------------------------------------------------- */
 /*                               Card-slider                                  */
 /* -------------------------------------------------------------------------- */
+.card-slider {
+    background-color: $bg-grey;
+}
+
+.card-slider__inner {
+    .slick-slide {
+        margin: 0 10px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                score section                               */
+/* -------------------------------------------------------------------------- */
+.score {
+    padding: 95px 0;
+    background-color: rgba(13, 15, 19, 0.8);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include f400;
+    }
+
+    &__item {
+        text-align: center;
+        font-size: 48px;
+
+        &--case {
+            color: $yellow;
+        }
+
+        &--cloud {
+            color: rgb(88, 201, 233);
+        }
+
+        &--smile {
+            color: $green;
+        }
+
+        &--members {
+            color: rgb(255, 106, 109);
+        }
+    }
+
+    &__num {
+        margin-top: 52px;
+        font-size: 36px;
+        padding-bottom: 22px;
+    }
+
+    &__descr {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  benefits                                  */
+/* -------------------------------------------------------------------------- */
+.benefits {
+    padding: 120px 0;
+
+    &__title {
+        color: $text-color--dark;
+        font-size: 36px;
+        @include f400;
+        text-align: center;
+
+        span {
+            color: $bg-blue;
+        }
+    }
+
+    &__subtitle {
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 22px 0 60px 0;
+        @include f400;
+        line-height: 30px;
+        font-size: 16px;
+        color: $card-text;
+        text-align: center;
+    }
+}
+
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include f400;
+
+    &__item+.card-grid__item {
+        margin-right: -10px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 361px;
+        min-height: 373px;
+        width: 100%;
+        text-align: center;
+        padding: 50px 31px 59px 31px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        @include f400;
+
+        &:before {
+            position: absolute;
+            opacity: 0.2;
+            color: rgb(92, 135, 248);
+            font-size: 48px;
+            @include f300;
+            top: 11px;
+            left: 13px;
+
+        }
+
+        span {
+            font-size: 60px;
+            padding-bottom: 40px;
+        }
+
+        &--payment {
+            span {
+                color: $bg-blue;
+            }
+
+            &:before {
+                content: "01";
+            }
+        }
+
+        &--quality {
+            span {
+                color: rgb(127, 78, 194);
+            }
+
+            &:before {
+                content: "02";
+            }
+        }
+
+        &--secure {
+            span {
+                color: $green;
+
+            }
+
+            &:before {
+                content: "03";
+            }
+
+        }
+
+        &--organized {
+            span {
+                color: $yellow;
+            }
+
+            &:before {
+                content: "04";
+            }
+
+        }
+
+        &--update {
+            span {
+                color: rgb(88, 201, 233);
+            }
+
+            &:before {
+                content: "05";
+            }
+        }
+
+        &--support {
+            span {
+                color: rgb(255, 106, 109);
+            }
+
+            &:before {
+                content: "06";
+            }
+        }
+
+    }
+
+    &__title {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        margin: 0;
+        color: $card-text;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
