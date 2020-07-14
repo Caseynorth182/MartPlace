@@ -19,6 +19,13 @@ $(function () {
         slidesToScroll: 1,
         variableWidth: true,
     });
+    //feedback slider
+    $('.feedback-card').slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+    });
 
     // MixitUp 
     if ($('.products__block').length) {
