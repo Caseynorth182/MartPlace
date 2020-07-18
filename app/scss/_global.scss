@@ -2,6 +2,12 @@ html {
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+
+}
+
 *,
 *::before,
 *::after {
@@ -18,16 +24,27 @@ a {
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
+// slicky footer
 body {
-    font-family: 'Quicksand',
-        sans-serif;
+    @include f400;
+    display: flex;
+    flex-direction: column;
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+// slicky footer -end
 .btn {
     border: none;
     padding: 12px 18px;
@@ -75,14 +92,16 @@ body {
     }
 
     &:focus {
-        outline-style: inherit;
         border: 1px solid $bg-blue;
+        outline-color: transparent;
     }
 }
 
 .user__avatar {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .rate-star {
@@ -94,5 +113,42 @@ body {
 
     &--tab {
         margin-right: auto;
+        margin-left: 29px;
+    }
+}
+
+//title-block
+.title-box {
+    margin: 0 auto;
+    max-width: 576px;
+    width: 100%;
+    text-align: center;
+    @include f400;
+
+    &--white {
+        color: white;
+    }
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 18px;
+        color: rgb(0, 0, 0);
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__highlight {
+        color: $bg-blue;
+    }
+
+    &__subtitle {
+        line-height: 30px;
+        color: rgb(85, 85, 85);
+
+        &--white {
+            color: white;
+        }
     }
 }

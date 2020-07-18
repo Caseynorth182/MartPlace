@@ -11,20 +11,23 @@ $card-text:rgb(85, 85, 85);
 @mixin f300 {
     font-family: 'Quicksand',
         sans-serif;
-         font-weight: 300;
+    font-weight: 300;
 }
+
 @mixin f400 {
     font-family: 'Quicksand',
         sans-serif;
-         font-weight: 400;
+    font-weight: 400;
 }
+
 @mixin f500 {
     font-family: 'Quicksand',
         sans-serif;
-         font-weight: 500;
+    font-weight: 500;
 }
+
 @mixin f700 {
     font-family: 'Quicksand',
         sans-serif;
-         font-weight: 700;
+    font-weight: 700;
 }
