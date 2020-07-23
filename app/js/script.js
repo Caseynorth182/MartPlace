@@ -6,7 +6,6 @@ $(function () {
         nextArrow: "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
         autoplay: true,
         slidesToShow: 1,
-        adaptiveHeight: true,
         autoplaySpeed: 2000,
     })
 
@@ -72,7 +71,52 @@ $(function () {
         $('.burger__item').toggleClass('burger__item--active');
     });
 
+    //category-filter btn toggle
+    $(".product-filter__group-btn--list").on("click", function () {
+        $(".card-item").addClass("list");
+        $(".card-item").removeClass("grid");
 
+    });
+    $(".product-filter__group-btn--grid").on("click", function () {
+        $(".card-item").addClass("grid");
+        $(".card-item").removeClass("list");
+    });
+
+    //aside accordion category toogle
+    $(".accordion-item__trigger").click(function () {
+        $(this).next(".accordion-item__content").slideToggle()
+    })
+
+    //ion Range-slider
+    $(".js-range-slider").ionRangeSlider({
+        skin: "big",
+        type: "double",
+        min: 0,
+        max: 400,
+        from: 0,
+        to: 400,
+        step: 10,
+        prefix: "$",
+        grid: false, // show/hide grid
+        force_edges: false, // force UI in the box
+        hide_min_max: false, // show/hide MIN and MAX labels
+        hide_from_to: false, // show/hide FROM and TO labels
+        block: false // block instance from changing
+    });
+
+
+    //mixItUp category
+    if ($('.product-page').length) {
+        var mixer = mixitup('.product-page', {
+            "animation": {
+                "duration": 250,
+                "nudge": true,
+                "reverseOut": true,
+                "effects": "fade scale(1)"
+            }
+        });
+
+    }
 
     //rateYo stars
     $(".rate-star").rateYo({

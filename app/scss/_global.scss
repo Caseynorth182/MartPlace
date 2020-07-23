@@ -106,6 +106,10 @@ body {
 .rate-star {
     display: inline-block;
 
+    &--category {
+        margin-left: 0;
+    }
+
     &--slider {
         margin-left: auto;
     }
@@ -149,5 +153,13 @@ body {
         &--white {
             color: white;
         }
+    }
+}
+
+.breadcrumbs {
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 }
