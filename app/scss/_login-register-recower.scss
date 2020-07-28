@@ -28,6 +28,10 @@
         color: rgb(85, 85, 85);
         font-size: 16px;
         line-height: 28px;
+
+        &--recover {
+            text-align: left;
+        }
     }
 
     &__box {
@@ -62,6 +66,17 @@
         width: 190px;
         box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
         border-radius: 25px;
+
+        &--register,
+        &--submit {
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        &--register {
+            margin: 0 auto;
+        }
+
     }
 
     &__footer {

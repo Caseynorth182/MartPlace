@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Contacts</title>
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="css/libs.min.css">
@@ -736,71 +736,112 @@
 
         <main class="site-content">
             <!-- //SECTION -->
-            <section class="promo promo--login">
+            <section class="promo promo--contacts">
                 <div class="container">
-                    <div class="promo-inner promo-inner--login ">
-                        <div class="promo-breadcrumbs breadcrumbs promo-breadcrumbs--single">
-                            <ul class="promo-breadcrumbs__list">
-                                <li class="promo-breadcrumbs__item ">
-                                    <a class="promo-breadcrumbs__link " href="#">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="promo-breadcrumbs__item">
-                                    <span class="promo-breadcrumbs__link">
-                                        Login
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="promo-inner__title--single">
-                            Login
+                    <div class="promo-inner promo-inner--contacts ">
+
+                        <span class="promo-inner__title--contacts">
+                            Contact Us
+                        </span>
+                        <span class="promo-inner__subtitle--contacts">
+                            You came to the right place
                         </span>
                     </div>
                 </div>
             </section>
 
-            <!-- //SECTION  LOGIN-->
-            <section class="login">
+            <!-- //SECTION  CONTACTS-->
+            <section class="contacts">
                 <div class="container">
-                    <div class="login__inner">
-                        <div class="login__title-box">
-                            <span class="login__title">Welcome Back</span>
-                            <span class="login__subtitle">You can sign in with your username</span>
+                    <div class="contacts__title-box title-box">
+                        <div class="title-box__title">
+                            Our Clients
+                            <span class="title-box__highlight">
+                                Feedback
+                            </span>
                         </div>
-                        <div class="login__box">
-                            <form class="login__form">
-                                <label class="login__label" for="login">Username</label>
-                                <input class="login__input" id="login" type="text" name="username-text"
-                                    placeholder="Enter your username...">
-                                <label class="login__label" for="password">Password</label>
-                                <input class="login__input" id="password" type="text" name="username-password"
-                                    placeholder="Enter your password...">
-                            </form>
-                            <form class="login__checkbox checkbox">
-                                <label class="checkbox aside-lic__label ">
-                                    <input class="checkbox aside-lic__input" type="checkbox" checked name="single">
-                                    <span class="checkbox aside-lic__check"></span>
-                                    Remember me
-                                </label>
-                                <button class="login__btn btn" type="submit">Login Now</button>
-                            </form>
-                            <div class="login__footer">
-                                <span class="login__lost">
-                                    Lost your
-                                    <a class="login__lost-acc" href="#">username</a>
-                                    or
-                                    <a class="login__lost-pas" href="#">password?</a>
-                                </span>
-                                <span class="login__regis">
-                                    Don't have an
-                                    <a class="login__regis-acc" href="#">account?</a>
-                                </span>
+                        <div class="title-box__subtitle">
+                            Laborum dolo rumes fugats untras. Etharums ser quidem rerum
+                            facilis
+                            dolores
+                            nemis
+                            omnis fugats. Lid est laborum dolo
+                            rumes fugats untras.
+                        </div>
+                    </div>
+
+                    <div class="contacts__inner">
+
+                        <div class="contacts-cards">
+                            <div class="contacts-cards__item">
+                                <span class="lnr lnr-map-marker"></span>
+                                <span class="contacts-cards__title">Office Address</span>
+                                <p class="contacts-cards__descr">
+                                    202 New Hampshire Avenue
+                                    Northwest #100, New York-2573
+                                </p>
                             </div>
                         </div>
 
+                        <div class="contacts-cards">
+                            <div class="contacts-cards__item">
+                                <span class="lnr lnr-phone"></span>
+                                <span class="contacts-cards__title">Office Address</span>
+                                <a class="contacts-cards__phone" href="tel:18006434500">1-800-643-4500</a>
+                                <a class="contacts-cards__phone" href="tel:18006434500">1-800-643-4500</a>
+                            </div>
+                        </div>
+
+                        <div class="contacts-cards">
+                            <div class="contacts-cards__item">
+                                <span class="lnr lnr-inbox"></span>
+                                <span class="contacts-cards__title">Office Address</span>
+                                <a class="contacts-cards__email"
+                                    href="mailto:support@aazztech.com">support@aazztech.com</a>
+                                <a class="contacts-cards__email"
+                                    href="mailto:support@aazztech.com">support@aazztech.com</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="contacts__message login__inner">
+                        <div class="login__title-box">
+                            <span class="login__title">
+                                Leave Your Messages
+                            </span>
+                        </div>
+                        <div class="contacts__box">
+
+                            <form class="contacts__form">
+                                <input class="contacts__input" id="name" type="text" name="username-name"
+                                    placeholder="Name">
+
+                                <input class="contacts__input" id="Email" type="email" name="username-Email"
+                                    placeholder="Email">
+
+                                <input class="contacts__input" id="Subject" type="text" name="username-Subject"
+                                    placeholder="Subject">
+
+                                <input class="contacts__input" id="Phone" type="tel" name="username-Phone"
+                                    placeholder="Phone">
+
+
+                                <textarea class="contacts__textarea" id="textarea"
+                                    placeholder="Your text here..."></textarea>
+
+                            </form>
+                            <button class="login__btn btn login__btn--register" type="submit">Register Now</button>
+                        </div>
+
+                    </div>
+            </section>
+
+            <section class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18739.979861150467!2d151.18980288589177!3d-33.86925847175681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae378c2c8573%3A0xe0f12b972d884ed4!2sGoogle%20Building%20WHF7!5e0!3m2!1sru!2sua!4v1595962877622!5m2!1sru!2sua"
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0">
+                </iframe>
             </section>
         </main>
     </div>
