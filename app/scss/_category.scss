@@ -89,6 +89,8 @@
 
     &__wrapper {
         display: flex;
+        //@extend
+        /* flex-direction: column; */
     }
 
     &__content {
@@ -110,6 +112,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+
 }
 
 .accordion {
@@ -299,10 +302,11 @@
             flex-direction: column;
 
             &--text {
-                width: 260px;
+                /* width: 260px; */
                 padding: 0 30px 0 20px;
                 border-right: 1px solid $bg-grey;
                 text-align: left;
+                flex: 1 1 auto;
             }
 
             &__title {
@@ -319,6 +323,8 @@
             &--user {
                 padding: 14px 20px 14px 20px;
                 border-right: 1px solid $bg-grey;
+                flex: 1 1 auto;
+
 
                 .rate-star--tab {
                     margin-left: 0;
@@ -352,6 +358,7 @@
             &--price {
                 text-align: center;
                 justify-content: space-around;
+                flex: 1 1 auto;
                 padding: 14px 20px 14px 20px;
 
                 .product-card__btn {
