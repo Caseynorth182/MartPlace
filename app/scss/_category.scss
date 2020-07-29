@@ -7,6 +7,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+    }
+
+    &__result {
+        display: inline-block;
+        font-size: 24px;
+
+        .product-filter__result-num {
+            font-weight: 500;
+        }
+    }
+
+
+
+    &__btn-box {
+        position: relative;
     }
 
     &__btn {
@@ -35,6 +51,10 @@
         &--price {
             margin-left: auto;
             margin-right: 30px;
+        }
+
+        &--fav {
+            margin-right: 75px;
         }
     }
 
@@ -89,8 +109,15 @@
 
     &__wrapper {
         display: flex;
-        //@extend
-        /* flex-direction: column; */
+
+        .product-card__item+.product-card__item {
+            margin-left: 0;
+        }
+
+        &--fav {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
     &__content {
@@ -107,162 +134,9 @@
     }
 }
 
-//ASIDE SECTION
-.aside {
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
 
-}
 
-.accordion {
-    display: flex;
-}
 
-.accordion-range {
-    padding-bottom: 40px;
-
-    .irs-from,
-    .irs-single,
-    .irs-to {
-        position: absolute;
-        display: none;
-        right: 0 !important;
-        top: 66px;
-    }
-
-    .irs-to {
-        right: 0 !important;
-    }
-
-    .irs-bar {
-        border: none;
-        border-radius: 3px;
-        background: rgb(115, 71, 193);
-        height: 6px;
-    }
-
-    .irs--big .irs-handle {
-        width: 18px;
-        height: 18px;
-        border: 4px solid rgb(6, 116, 236);
-        background: rgb(255, 255, 255);
-        top: 26px;
-    }
-
-    .irs--big {
-        top: -20px;
-    }
-
-    .irs--big .irs-line {
-        height: 6px;
-        width: 202px;
-    }
-}
-
-.accordion-item {
-    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-    border-radius: 4px;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 30px;
-
-    &__price {
-        display: inline-block;
-        color: rgb(115, 71, 193);
-        font-size: 15px;
-        border-radius: 16px;
-        background-color: rgba(115, 71, 193, 0.1);
-        padding: 9px 25px;
-    }
-
-    &__price {
-        &+.accordion-item__price {
-            margin-left: 59px;
-        }
-    }
-
-    &__btn {
-        display: block;
-        margin: 0 auto;
-        margin-top: 25px;
-    }
-
-    &__trigger {
-        position: relative;
-        width: 263px;
-        padding: 31px 28px;
-        color: rgb(1, 1, 1);
-        font-family: Quicksand;
-        font-size: 20px;
-        font-weight: 400;
-
-        &:after {
-            content: "";
-            background-image: url(../img/product-filter/right.svg);
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            right: 10px;
-        }
-    }
-
-    &__content {
-        display: none;
-        list-style-type: none;
-        margin: 0;
-        width: 263px;
-        padding: 0 20px;
-        border-top: none;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        padding: 16px 20px 16px 0;
-        cursor: pointer;
-
-        &:first-child {
-            border-top: 1px solid rgb(231, 235, 238);
-        }
-    }
-
-    &__link {
-        position: relative;
-        padding-left: 20px;
-        color: rgb(85, 85, 85);
-        font-size: 15px;
-        border: none;
-        background-color: transparent;
-        outline-color: transparent;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-            color: $bg-blue;
-        }
-
-        &:active {
-            color: $green;
-        }
-
-        &:before {
-            content: "";
-            background-image: url(../img/product-filter/right.svg);
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            left: 0;
-            top: 31%;
-        }
-
-        &--filter {
-            &:before {
-                background-image: url(../img/product-filter/circle.svg);
-            }
-        }
-    }
-}
 
 /* -------------------------------------------------------------------------- */
 /*                            list  /grid                      */
@@ -483,13 +357,16 @@
         display: flex;
         justify-content: flex-end;
 
+        &--fav {
+            justify-content: center;
+        }
+
     }
 
     &__item {
         border-radius: 19px;
         background-color: rgb(255, 255, 255);
         color: black;
-
 
         &+.pagination__item {
             margin-left: 8px;
@@ -501,16 +378,12 @@
             background-color: rgb(6, 116, 236);
             color: white;
         }
-
-
     }
 
     &__link {
         display: block;
         padding: 13px 19px;
         color: inherit;
-
-
     }
 }
 
