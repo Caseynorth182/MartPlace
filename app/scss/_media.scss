@@ -84,6 +84,12 @@
         width: 100%;
     }
     //!!SINGLE_PRODUCT page
+    //LOGIN
+    .contacts__inner {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    //!!LOGIN
 }
 
 //ANCHOR 1041px
@@ -310,13 +316,29 @@
             }
         }
     }
-
     //!!PRODUCT-FILTER
+    //HOW BLOG PAGE
+    .how-blog {
+        &__inner {
+            justify-content: space-around;
+        }
+        &__img {
+            margin-bottom: 15px;
+        }
+    }
+    //!!HOW BLOG PAGE
 }
-//ANCHOR 820px
+//ANCHOR 824px
 @media (max-width: 824px) {
     .product-page__inner {
         justify-content: space-around;
+    }
+    .product-card {
+        margin-left: -20px;
+        &__item {
+            flex-basis: calc(50% - 20px);
+            margin-left: 20px;
+        }
     }
 }
 //ANCHOR 760px
@@ -467,6 +489,21 @@
             flex-direction: row;
         }
     }
+    //LOGIN
+    .contacts {
+        &__form {
+            justify-content: space-around;
+            align-items: center;
+        }
+        &__box {
+            padding: 40px 20px 60px;
+        }
+        &__input,
+        &__textarea {
+            max-width: 320px;
+        }
+    }
+    //!!LOGIN
 }
 
 //ANCHOR 676px
@@ -593,7 +630,6 @@
             font-size: 12px;
         }
     }
-
     //!!TEMPSLIDER
     //PRODUCTS
     .product-box {
@@ -602,30 +638,32 @@
             font-size: 12px;
         }
     }
-    .product-card__item + .product-card__item {
+    .product-card {
         margin-left: 0;
+        &__item {
+            flex-basis: 80%;
+            margin-left: 0;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
     }
     //!!PRODUCTS
     //SCORE
     .score {
         padding: 50px 0 50px 0;
         min-height: 0;
-
         &__inner {
             justify-content: space-around;
             flex-wrap: wrap;
             font-size: 15px;
         }
-
         &__item {
             font-size: 30px;
             margin: 15px 15px;
-
             & + & {
                 margin-right: 15px;
             }
         }
-
         &__num {
             font-size: 20px;
             margin-top: 15px;
@@ -733,6 +771,34 @@
     }
 
     //!!BLOG page
+    //HOW BLOG PAGE
+    .how-blog {
+        &__inner {
+            padding: 50px 0;
+        }
+        &__img {
+            height: 250px;
+        }
+    }
+    //!!HOW BLOG PAGE
+    //LOGIN PAGE
+    .login {
+        &__box,
+        &__title-box {
+            padding: 30px 20px 25px;
+        }
+        &__footer {
+            line-height: 30px;
+        }
+        &__lost {
+            flex-basis: 47%;
+            border-right: 1px solid $bg-grey;
+        }
+        &__regis {
+            flex-basis: 50%;
+        }
+    }
+    //!!LOGIN PAGE
 }
 
 //ANCHOR 480px
@@ -903,6 +969,21 @@
         }
     }
     //!!BLOG PAGE
+    //HOW BLOG PAGE
+    .how-blog {
+        &__inner {
+            padding: 50px 0;
+        }
+        &__img {
+            height: 180px;
+        }
+    }
+    //!!HOW BLOG PAGE
+    //LOGIN
+    .login {
+        padding: 40px 0;
+    }
+    //!!LOGIN
 }
 
 //ANCHOR 380px
@@ -954,7 +1035,7 @@
     }
     //!!TEMPSLIDER
     .product-card__item {
-        margin: 0;
+        /* margin: 0; */
         margin-bottom: 15px;
     }
     .tabs .tab {

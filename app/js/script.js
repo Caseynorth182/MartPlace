@@ -27,7 +27,7 @@ $(function () {
             "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
         nextArrow:
             "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
-        autoplay: true,
+        /*   autoplay: true, */
         autoplaySpeed: 2000,
         infinite: true,
         slidesToShow: 3,
@@ -52,7 +52,7 @@ $(function () {
     $(".feedback-card").slick({
         arrows: true,
         infinite: true,
-        autoplay: true,
+        /*  autoplay: true, */
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 2,

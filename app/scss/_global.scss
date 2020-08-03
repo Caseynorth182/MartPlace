@@ -41,7 +41,11 @@ body {
 .footer {
     flex-shrink: 0;
 }
-
+//google-map
+.map__google-map {
+    width: 100%;
+    height: 400px;
+}
 // slicky footer -end
 .btn {
     border: none;

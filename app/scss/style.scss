@@ -1156,7 +1156,6 @@
     margin-top: 10px;
     border-radius: 5px;
     overflow: hidden;
-    /* min-height: 1000px; */
 }
 
 .slider-wrapper {
@@ -1389,12 +1388,9 @@
 .product-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    & + & {
-        margin-left: 15px;
-    }
+    justify-content: flex-start;
+    margin-left: -30px;
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -1403,11 +1399,9 @@
         margin-bottom: 30px;
         border-radius: 4px;
         overflow: hidden;
-        max-width: 361px;
+        flex-basis: calc(33.333% - 30px);
+        margin-left: 30px;
         width: 100%;
-        & + & {
-            margin-left: 28px;
-        }
         &--list {
             flex-direction: row;
             max-width: 100%;
@@ -1427,7 +1421,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 361px;
+        /* max-width: 361px; */
         width: 100%;
         height: 230px;
         position: relative;
@@ -1441,7 +1435,7 @@
     }
     &__img {
         position: relative;
-        max-width: 361px;
+        /* max-width: 361px; */
         width: 100%;
         height: 230px;
         object-fit: cover;
@@ -1568,15 +1562,22 @@
 /*                               Card-slider                                  */
 /* -------------------------------------------------------------------------- */
 .card-slider {
+    &__item {
+        margin: 0 auto;
+    }
+    &__wrap {
+    }
+    .slick-track .slick-slide + .slick-slide {
+        margin-left: 15px;
+    }
     background-color: $bg-grey;
-}
-
-.card-slider__inner {
-    .slick-slide {
-        margin: 0 10px;
+    .slick-list.draggable {
+        margin-right: -15px;
     }
 }
-
+.card-slider .slick-list.draggable {
+    margin-right: 0;
+}
 /* -------------------------------------------------------------------------- */
 /*                                score section                               */
 /* -------------------------------------------------------------------------- */
@@ -2995,6 +2996,7 @@
         padding: 100px 0;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         &--white {
             flex-direction: row;
         }
@@ -3042,6 +3044,7 @@
         padding: 60px 50px 30px;
         text-align: center;
         border-bottom: 1px solid $bg-grey;
+        margin-top: 30px;
     }
     &__title {
         display: block;
