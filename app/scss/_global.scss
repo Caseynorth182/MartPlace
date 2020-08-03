@@ -5,7 +5,6 @@ html {
 html,
 body {
     height: 100%;
-
 }
 
 *,
@@ -16,7 +15,6 @@ body {
 
 a {
     text-decoration: none;
-
 }
 
 .transition {
@@ -66,7 +64,6 @@ body {
     &:active {
         box-shadow: 0px 0px 9px -1px $bg-blue inset;
     }
-
 }
 
 .link-btn {
@@ -90,7 +87,6 @@ body {
 
     &:focus {
         border: 1px solid $bg-blue;
-
     }
 }
 
@@ -114,7 +110,7 @@ body {
     }
 
     .jq-ry-normal-group svg {
-        fill: #FFF;
+        fill: #fff;
         stroke: #ffc000;
         stroke-width: 40;
     }
@@ -219,13 +215,13 @@ body {
             }
 
             &:after {
-                content: '';
+                content: "";
                 display: none;
             }
         }
 
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             background-image: url(../img/icons/verticaldots.svg);
             left: 95px;
@@ -233,11 +229,7 @@ body {
             height: 20px;
         }
     }
-
-
 }
-
-
 
 .dropdown {
     display: none;
@@ -267,17 +259,16 @@ body {
     z-index: 5;
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: -16px;
         right: 0;
         width: 18px;
         height: 16px;
         border-style: solid;
-        border-width: .5em .5em .5em .5em;
+        border-width: 0.5em 0.5em 0.5em 0.5em;
         border-color: transparent transparent white transparent;
         box-shadow: 0 5px 40px rgba(82, 85, 90, 0.2);
-
     }
 
     &__item {
@@ -322,7 +313,7 @@ body {
         }
     }
 
-    &__btn+.product-box__btn {
+    &__btn + .product-box__btn {
         margin-left: 3px;
     }
 }
@@ -357,13 +348,17 @@ body {
         position: absolute;
         transition: all 0.3s;
         background-color: rgb(0, 150, 136);
-        background-image: linear-gradient(to left, rgb(6, 116, 236) 0%, rgb(115, 71, 193) 100%);
+        background-image: linear-gradient(
+            to left,
+            rgb(6, 116, 236) 0%,
+            rgb(115, 71, 193) 100%
+        );
         opacity: 0.9;
         z-index: 1;
     }
 
     &__link {
-        &+.card__link {
+        & + .card__link {
             margin-left: 11px;
         }
     }
@@ -446,17 +441,17 @@ body {
 }
 
 .breadcrumbs {
-
     &__list {
         list-style-type: none;
         padding: 0;
         margin: 0;
     }
-
+    &__link {
+        margin-top: 10px;
+    }
     &--single {
         margin-top: 0;
     }
-
     &--login {
         padding-left: 0;
     }
@@ -469,6 +464,9 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+    &--single {
+        flex-direction: row;
+    }
 
     .tab {
         width: 100%;
@@ -480,7 +478,7 @@ body {
         border-top: 3px solid transparent;
         font-size: 17px;
 
-        &+.tab {
+        & + .tab {
             border-left: 1px solid $bg-grey;
         }
     }
@@ -501,11 +499,10 @@ body {
             border-top: 3px solid transparent;
             font-size: 17px;
 
-            &+.tab {
+            & + .tab {
                 border-left: none;
             }
         }
-
 
         .active {
             border-top: none;
@@ -529,7 +526,6 @@ body {
             color: rgb(51, 51, 51);
         }
     }
-
 }
 
 //tab_content
@@ -588,7 +584,6 @@ body {
                 }
             }
         }
-
     }
 
     &__list-item {
@@ -655,7 +650,6 @@ body {
 
         &--accordion {
             position: relative;
-
         }
     }
 
@@ -719,7 +713,7 @@ body {
     }
 
     &__price {
-        &+.accordion-item__price {
+        & + .accordion-item__price {
             margin-left: 59px;
         }
     }
@@ -832,11 +826,9 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
-
     &--blog {
         margin-right: 0;
     }
-
 }
 
 .accordion {
@@ -846,7 +838,6 @@ body {
 
 .accordion-range {
     padding-bottom: 40px;
-
     .irs-from,
     .irs-single,
     .irs-to {
@@ -855,18 +846,15 @@ body {
         right: 0 !important;
         top: 66px;
     }
-
     .irs-to {
         right: 0 !important;
     }
-
     .irs-bar {
         border: none;
         border-radius: 3px;
         background: rgb(115, 71, 193);
         height: 6px;
     }
-
     .irs--big .irs-handle {
         width: 18px;
         height: 18px;
@@ -874,11 +862,9 @@ body {
         background: rgb(255, 255, 255);
         top: 26px;
     }
-
     .irs--big {
         top: -20px;
     }
-
     .irs--big .irs-line {
         height: 6px;
         width: 202px;
@@ -915,7 +901,7 @@ body {
         padding: 0 40px 40px;
         border-bottom: 1px solid $bg-grey;
 
-        .btn+.btn {
+        .btn + .btn {
             margin-left: 30px;
         }
 
@@ -998,11 +984,8 @@ body {
             padding: 12px 30px 12px 40px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             border-color: #fff;
-
-
-
             &:before {
-                content: '';
+                content: "";
                 position: absolute;
                 background-image: url(../img/icons/share.svg);
                 width: 20px;
@@ -1011,4 +994,45 @@ body {
             }
         }
     }
+}
+/* -------------------------------------------------------------------------- */
+/*                                 PAGINATION                                 */
+/* -------------------------------------------------------------------------- */
+.pagination {
+    height: 50px;
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        &--fav {
+            justify-content: center;
+        }
+    }
+    &__item {
+        border-radius: 19px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        & + .pagination__item {
+            margin-left: 8px;
+        }
+        &--current {
+            display: block;
+            border-radius: 19px;
+            background-color: rgb(6, 116, 236);
+            color: white;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 13px 19px;
+        color: inherit;
+    }
+}
+.arrow-left--current {
+    background-color: rgb(115, 71, 193);
+    color: white;
+}
+.arrow-right--current {
+    background-color: rgb(115, 71, 193);
+    color: white;
 }
