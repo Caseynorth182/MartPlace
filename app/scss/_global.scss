@@ -61,14 +61,12 @@ body {
     color: white;
     cursor: pointer;
     transition: all 0.3s;
-
     &:hover,
     &:focus {
         background-color: white;
         color: $bg-blue;
         border: 1px solid $bg-blue;
     }
-
     &:active {
         box-shadow: 0px 0px 9px -1px $bg-blue inset;
     }
@@ -83,16 +81,13 @@ body {
     @include f400;
     padding: 17px 32px;
     outline-color: transparent;
-
     &:hover {
         background-color: #fff;
         color: $bg-blue;
     }
-
     &:active {
         box-shadow: 0px 0px 9px -1px $bg-blue inset;
     }
-
     &:focus {
         border: 1px solid $bg-blue;
     }
@@ -100,23 +95,18 @@ body {
 
 .rate-star {
     display: inline-block;
-
     & category {
         margin-left: 0;
     }
-
     &--slider {
         margin-left: auto;
     }
-
     &--tab {
         margin-right: auto;
     }
-
     &--tab-off {
         display: none;
     }
-
     .jq-ry-normal-group svg {
         fill: #fff;
         stroke: #ffc000;
@@ -131,31 +121,25 @@ body {
     width: 100%;
     text-align: center;
     @include f400;
-
     &--white {
         color: white;
     }
-
     &__title {
         font-size: 36px;
         margin-bottom: 18px;
         color: rgb(0, 0, 0);
-
         &--white {
             color: white;
         }
     }
-
     &__highlight {
         color: $bg-blue;
     }
-
     &__subtitle {
         line-height: 30px;
         color: rgb(85, 85, 85);
         font-size: 17px;
         padding: 0 10px;
-
         &--white {
             color: white;
         }
@@ -174,19 +158,16 @@ body {
     margin-bottom: 52px;
     position: relative;
     height: 110px;
-
     &--tab {
         line-height: 28px;
         position: relative;
         height: 100px;
         margin-bottom: 31px;
     }
-
     &__text {
         color: rgb(0, 0, 0);
         font-size: 30px;
     }
-
     &__ctrl,
     &__ctrl-blue {
         width: 110px;
@@ -195,16 +176,13 @@ body {
         background-color: rgb(115, 71, 193);
         margin-left: auto;
     }
-
     &__ctrl-blue {
         background-color: rgb(6, 116, 236);
     }
-
     &__btn {
         position: relative;
         display: flex;
         align-items: center;
-
         padding: 20px 0;
         border: none;
         color: card-text;
