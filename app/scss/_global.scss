@@ -5,6 +5,8 @@ html {
 html,
 body {
     height: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
 
 *,
@@ -41,11 +43,13 @@ body {
 .footer {
     flex-shrink: 0;
 }
+
 //google-map
 .map__google-map {
     width: 100%;
     height: 400px;
 }
+
 // slicky footer -end
 .btn {
     border: none;
@@ -198,14 +202,19 @@ body {
 
     &__btn {
         position: relative;
-        margin-right: 30px;
+        display: flex;
+        align-items: center;
+
         padding: 20px 0;
         border: none;
         color: card-text;
         font-size: 16px;
         background-color: white;
         cursor: pointer;
-
+        margin-left: 0;
+        svg {
+            margin-left: 16px;
+        }
         &--fav {
             padding: 41px 30px;
             border-left: 1px solid $bg-grey;
@@ -222,15 +231,6 @@ body {
                 content: "";
                 display: none;
             }
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            background-image: url(../img/icons/verticaldots.svg);
-            left: 95px;
-            width: 20px;
-            height: 20px;
         }
     }
 }
@@ -450,12 +450,15 @@ body {
         padding: 0;
         margin: 0;
     }
+
     &__link {
         margin-top: 10px;
     }
+
     &--single {
         margin-top: 0;
     }
+
     &--login {
         padding-left: 0;
     }
@@ -468,6 +471,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+
     &--single {
         flex-direction: row;
     }
@@ -830,6 +834,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+
     &--blog {
         margin-right: 0;
     }
@@ -842,6 +847,7 @@ body {
 
 .accordion-range {
     padding-bottom: 40px;
+
     .irs-from,
     .irs-single,
     .irs-to {
@@ -850,15 +856,18 @@ body {
         right: 0 !important;
         top: 66px;
     }
+
     .irs-to {
         right: 0 !important;
     }
+
     .irs-bar {
         border: none;
         border-radius: 3px;
         background: rgb(115, 71, 193);
         height: 6px;
     }
+
     .irs--big .irs-handle {
         width: 18px;
         height: 18px;
@@ -866,9 +875,11 @@ body {
         background: rgb(255, 255, 255);
         top: 26px;
     }
+
     .irs--big {
         top: -20px;
     }
+
     .irs--big .irs-line {
         height: 6px;
         width: 202px;
@@ -988,6 +999,7 @@ body {
             padding: 12px 30px 12px 40px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             border-color: #fff;
+
             &:before {
                 content: "";
                 position: absolute;
@@ -999,26 +1011,32 @@ body {
         }
     }
 }
+
 /* -------------------------------------------------------------------------- */
 /*                                 PAGINATION                                 */
 /* -------------------------------------------------------------------------- */
 .pagination {
     height: 50px;
+
     &__list {
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
+
         &--fav {
             justify-content: center;
         }
     }
+
     &__item {
         border-radius: 19px;
         background-color: rgb(255, 255, 255);
         color: black;
+
         & + .pagination__item {
             margin-left: 8px;
         }
+
         &--current {
             display: block;
             border-radius: 19px;
@@ -1026,16 +1044,19 @@ body {
             color: white;
         }
     }
+
     &__link {
         display: block;
         padding: 13px 19px;
         color: inherit;
     }
 }
+
 .arrow-left--current {
     background-color: rgb(115, 71, 193);
     color: white;
 }
+
 .arrow-right--current {
     background-color: rgb(115, 71, 193);
     color: white;

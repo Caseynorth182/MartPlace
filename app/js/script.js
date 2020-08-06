@@ -2,38 +2,31 @@ $(function () {
     //slick slider
     $(".slider").slick({
         appendArrows: $(".title-block--blue"),
-        prevArrow:
-            "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
-        nextArrow:
-            "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
+        prevArrow: "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
+        nextArrow: "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
         /*  autoplay: true, */
         slidesToShow: 1,
         autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                },
+        responsive: [{
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
             },
-        ],
+        }, ],
     });
 
     //card-slider
     $(".card-slider__inner").slick({
         appendArrows: $(".title-block--purple"),
-        prevArrow:
-            "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
-        nextArrow:
-            "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
+        prevArrow: "<button class='slick-arrow slick-prev'><img src='img/tempSlider/left.svg'></button>",
+        nextArrow: "<button class='slick-arrow slick-next'><img src='img/tempSlider/right.svg'></button>",
         /*   autoplay: true, */
         autoplaySpeed: 2000,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1010,
                 settings: {
                     slidesToShow: 2,
@@ -56,8 +49,7 @@ $(function () {
         autoplaySpeed: 2000,
         slidesToShow: 2,
         slidesToScroll: 2,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1210,
                 settings: {
                     arrows: false,
@@ -92,10 +84,14 @@ $(function () {
     //category-filter btn
     $(".product-filter__group-btn--list").on("click", function () {
         $(".card-item").addClass("list");
+        $(".product-filter__group-btn--list").addClass("active");
+        $(".product-filter__group-btn--grid").removeClass("active");
         $(".card-item").removeClass("grid");
     });
     $(".product-filter__group-btn--grid").on("click", function () {
         $(".card-item").addClass("grid");
+        $(".product-filter__group-btn--grid").addClass("active");
+        $(".product-filter__group-btn--list").removeClass("active");
         $(".card-item").removeClass("list");
     });
 
@@ -111,8 +107,8 @@ $(function () {
         if ($(window).width() <= 850)
             $(".product-card__item").removeClass("product-card__item--list");
     });
-    if ($(window).width() <= 850)
-        $(".product-card__item").removeClass("product-card__item--list");
+    /*  if ($(window).width() <= 850)
+         $(".product-card__item--list").addClass("product-card__item--list"); */
 
     //aside accordion category toogle
     $(".accordion-item__trigger").click(function () {
