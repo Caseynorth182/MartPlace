@@ -198,13 +198,11 @@ body {
             border-left: 1px solid $bg-grey;
             border-right: 1px solid $bg-grey;
             margin-right: 0;
-
             .lnr {
                 color: rgb(85, 85, 85);
                 font-size: 10px;
                 margin-left: 10px;
             }
-
             &:after {
                 content: "";
                 display: none;
@@ -228,18 +226,15 @@ body {
     right: 26px;
     color: $icon-color;
     font-size: 15px;
-
+    line-height: 28px;
+    transition: all 0.3s;
+    top: 100px;
+    z-index: 5;
     &--fav {
         left: -30px;
         padding: 27px 20px 26px 28px;
         min-width: 210px;
     }
-
-    line-height: 28px;
-    transition: all 0.3s;
-    top: 100px;
-    z-index: 5;
-
     &:after {
         content: "";
         position: absolute;
@@ -252,17 +247,14 @@ body {
         border-color: transparent transparent white transparent;
         box-shadow: 0 5px 40px rgba(82, 85, 90, 0.2);
     }
-
     &__item {
         list-style-type: none;
     }
-
     &__link {
         background-color: transparent;
         border: none;
         cursor: pointer;
         background-color: rgb(255, 255, 255);
-
         &:hover {
             color: $bg-blue;
         }
@@ -283,19 +275,16 @@ body {
         font-size: 15px;
         transition: all 0.3s;
         margin-bottom: 15px;
-
         &:hover,
         &:focus {
             background-color: $bg-blue;
             color: $bg-grey;
         }
-
         &:active {
             background-color: rgb(115, 115, 241);
         }
     }
-
-    &__btn + .product-box__btn {
+    &__btn+.product-box__btn {
         margin-left: 3px;
     }
 }
@@ -306,19 +295,16 @@ body {
     min-height: 450px;
     background-color: rgb(255, 255, 255);
     display: flex;
-
     &__picture {
         display: flex;
         overflow: hidden;
         position: relative;
         flex: 1 1 50%;
-
         &:hover .card__buttons {
             left: 0;
             top: 0;
         }
     }
-
     &__buttons {
         display: flex;
         left: 100%;
@@ -330,28 +316,21 @@ body {
         position: absolute;
         transition: all 0.3s;
         background-color: rgb(0, 150, 136);
-        background-image: linear-gradient(
-            to left,
-            rgb(6, 116, 236) 0%,
-            rgb(115, 71, 193) 100%
-        );
+        background-image: linear-gradient( to left, rgb(6, 116, 236) 0%, rgb(115, 71, 193) 100%);
         opacity: 0.9;
         z-index: 1;
     }
-
     &__link {
-        & + .card__link {
+        &+.card__link {
             margin-left: 11px;
         }
     }
-
     &__img {
         position: relative;
         width: 100%;
         overflow: hidden;
         object-fit: cover;
     }
-
     &__content {
         padding: 47px 48px 20px 47px;
         display: flex;
@@ -360,36 +339,29 @@ body {
         justify-content: space-between;
         flex: 1 1 50%;
     }
-
     &__title {
         color: rgb(0, 0, 0);
         font-size: 24px;
         font-weight: 500;
         padding: 27px 3px 0;
     }
-
     &__text {
         color: $card-text;
         font-size: 16px;
-
         line-height: 30px;
         margin: 0;
         padding: 10px 0;
     }
-
     &__tags {
         padding: 36px 10px 32px;
     }
-
     &__tags-item {
         padding: 7px 15px;
         color: $icon-color;
         font-size: 15px;
-
         border-radius: 14px;
         background-color: $bg-grey;
     }
-
     &__content-footer {
         border-top: 1px solid $bg-grey;
         display: flex;
@@ -398,15 +370,12 @@ body {
         padding-top: 20px;
         margin: 0;
     }
-
     &__like {
         margin-left: 19px;
     }
-
     &__cart {
         margin-left: 45px;
     }
-
     &__buy-btn {
         padding: 7px 18px;
         background-color: $bg-blue;
@@ -428,32 +397,33 @@ body {
         padding: 0;
         margin: 0;
     }
-
     &__link {
         margin-top: 10px;
     }
-
     &--single {
         margin-top: 0;
     }
-
     &--login {
         padding-left: 0;
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                                    TABS                                    */
+
+
 /* -------------------------------------------------------------------------- */
+
 .tabs {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-
     &--single {
         flex-direction: row;
     }
-
     .tab {
         width: 100%;
         background-color: #fff;
@@ -463,47 +433,38 @@ body {
         cursor: pointer;
         border-top: 3px solid transparent;
         font-size: 17px;
-
-        & + .tab {
+        &+.tab {
             border-left: 1px solid $bg-grey;
         }
     }
-
     .active {
         border-bottom: none;
         border-top: 3px solid $bg-blue;
         color: $bg-blue;
     }
-
     &__btn {
         display: flex;
     }
-
     &--blog {
         .tab {
             border-bottom: none;
             border-top: 3px solid transparent;
             font-size: 17px;
-
-            & + .tab {
+            &+.tab {
                 border-left: none;
             }
         }
-
         .active {
             border-top: none;
         }
-
         .tab-item {
             padding: 0;
         }
-
         .tab-card__date {
             display: block;
             margin-top: 10px;
             color: rgb(137, 143, 150);
         }
-
         .basket__title {
             font-size: 14px;
             font-weight: 500;
@@ -515,28 +476,23 @@ body {
 }
 
 //tab_content
-
 .tab-item {
     display: none;
     padding: 80px 30px;
     background-color: #fff;
-
     &:first-child {
         display: block;
     }
-
     &__img {
         display: block;
         width: 100%;
     }
-
     &__title {
         color: rgb(0, 0, 0);
         font-size: 24px;
         margin-bottom: 40px;
         display: inline-block;
     }
-
     &__text {
         margin: 0;
         margin-bottom: 70px;
@@ -545,19 +501,15 @@ body {
         font-size: 16px;
         line-height: 30px;
     }
-
     &__list {
         margin: 0;
         padding: 0;
         margin-bottom: 30px;
         list-style-type: none;
-
         &--numbers {
             counter-reset: number 0;
-
             .tab-item__list-item--numbers {
                 counter-increment: number;
-
                 &:before {
                     position: absolute;
                     content: counter(number) ".";
@@ -571,13 +523,11 @@ body {
             }
         }
     }
-
     &__list-item {
         position: relative;
         padding: 10px 20px;
         color: rgb(85, 85, 85);
         font-size: 16px;
-
         &:before {
             content: "";
             position: absolute;
@@ -590,55 +540,51 @@ body {
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                                 INPUT FORMS                                */
+
+
 /* -------------------------------------------------------------------------- */
 
 .form {
     max-width: 360px;
     width: 100%;
     position: relative;
-
     &__blog {
         padding: 40px 0;
         position: relative;
     }
-
     &--search {
         max-width: 361px;
     }
-
     &--promo {
         max-width: 555px;
         border-radius: 28px;
     }
-
     &--accordion {
         padding: 20px;
     }
-
     &__input {
         width: 100%;
         height: 46px;
         border-radius: 23px;
         padding: 0 75px 0 25px;
         border: 1px solid rgb(217, 223, 229);
-
         &:focus {
             border: 1px solid $bg-blue;
         }
-
         &--promo {
             height: 55px;
             border-radius: 28px;
             padding: 0 130px 0 25px;
         }
-
         &--accordion {
             position: relative;
         }
     }
-
     &__btn {
         position: absolute;
         top: 0;
@@ -649,28 +595,23 @@ body {
         cursor: pointer;
         transition: all 0.3s;
         padding: 13px 24px 14px;
-
         &--search {
             font-size: 0;
             padding: 14px 22px;
             width: 70px;
             height: 46px;
         }
-
         &--promo {
             border-radius: 28px;
             padding: 18px 31px 17px;
         }
-
         &--accordion {
             top: 38px;
             display: block;
             padding: 13px 24px 13px;
         }
-
         &:hover {
             border: 1px solid $bg-blue;
-
             .pic {
                 fill: rgb(6, 116, 236);
             }
@@ -678,8 +619,13 @@ body {
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                               ACCORDION ITEMS                              */
+
+
 /* -------------------------------------------------------------------------- */
 
 .accordion-item {
@@ -688,7 +634,6 @@ body {
     background-color: #fff;
     display: block;
     margin-bottom: 30px;
-
     &__price {
         display: inline-block;
         color: rgb(115, 71, 193);
@@ -697,19 +642,16 @@ body {
         background-color: rgba(115, 71, 193, 0.1);
         padding: 9px 25px;
     }
-
     &__price {
-        & + .accordion-item__price {
+        &+.accordion-item__price {
             margin-left: 59px;
         }
     }
-
     &__btn {
         display: block;
         margin: 0 auto;
         margin-top: 25px;
     }
-
     &__trigger {
         position: relative;
         width: 263px;
@@ -718,11 +660,9 @@ body {
         font-family: Quicksand;
         font-size: 20px;
         font-weight: 400;
-
         &--blog {
             width: 360px;
         }
-
         &:after {
             content: "";
             background-image: url(../img/product-filter/right.svg);
@@ -732,7 +672,6 @@ body {
             right: 10px;
         }
     }
-
     &__content {
         display: none;
         list-style-type: none;
@@ -740,33 +679,27 @@ body {
         width: 263px;
         padding: 0 20px;
         border-top: none;
-
         &--blog {
             width: 100%;
             max-width: 360px;
             text-align: left;
-
             .product-box__btn {
                 color: $bg-blue;
-
                 &:hover {
                     color: white;
                 }
             }
         }
     }
-
     &__list {
         display: flex;
         justify-content: space-between;
         padding: 16px 20px 16px 0;
         cursor: pointer;
-
         &:first-child {
             border-top: 1px solid rgb(231, 235, 238);
         }
     }
-
     &__link {
         position: relative;
         padding-left: 20px;
@@ -776,16 +709,13 @@ body {
         background-color: transparent;
         outline-color: transparent;
         cursor: pointer;
-
         &:hover,
         &:focus {
             color: $bg-blue;
         }
-
         &:active {
             color: $green;
         }
-
         &:before {
             content: "";
             background-image: url(../img/product-filter/right.svg);
@@ -795,7 +725,6 @@ body {
             left: 0;
             top: 31%;
         }
-
         &--filter {
             &:before {
                 background-image: url(../img/product-filter/circle.svg);
@@ -804,15 +733,19 @@ body {
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                               //ASIDE SECTION                              */
+
+
 /* -------------------------------------------------------------------------- */
 
 .aside {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
-
     &--blog {
         margin-right: 0;
     }
@@ -825,7 +758,6 @@ body {
 
 .accordion-range {
     padding-bottom: 40px;
-
     .irs-from,
     .irs-single,
     .irs-to {
@@ -834,18 +766,15 @@ body {
         right: 0 !important;
         top: 66px;
     }
-
     .irs-to {
         right: 0 !important;
     }
-
     .irs-bar {
         border: none;
         border-radius: 3px;
         background: rgb(115, 71, 193);
         height: 6px;
     }
-
     .irs--big .irs-handle {
         width: 18px;
         height: 18px;
@@ -853,19 +782,22 @@ body {
         background: rgb(255, 255, 255);
         top: 26px;
     }
-
     .irs--big {
         top: -20px;
     }
-
     .irs--big .irs-line {
         height: 6px;
         width: 202px;
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                                  TAB CARDS                                 */
+
+
 /* -------------------------------------------------------------------------- */
 
 .tab-card {
@@ -875,7 +807,6 @@ body {
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 40px;
-
     &__img {
         max-width: 750px;
         width: 100%;
@@ -883,21 +814,17 @@ body {
         object-fit: cover;
         display: block;
     }
-
     &__box {
         padding: 40px 0 30px;
         background-color: #fff;
         background-color: rgb(255, 255, 255);
     }
-
     &__box-top {
         padding: 0 40px 40px;
         border-bottom: 1px solid $bg-grey;
-
-        .btn + .btn {
+        .btn+.btn {
             margin-left: 30px;
         }
-
         .btn {
             width: 190px;
             border-radius: 30px;
@@ -908,12 +835,10 @@ body {
             background-color: #fff;
             color: rgb(115, 71, 193);
         }
-
         .lnr {
             margin-right: 5px;
         }
     }
-
     &__title {
         display: block;
         color: rgb(51, 51, 51);
@@ -922,12 +847,10 @@ body {
         line-height: 36px;
         padding: 0px 15px 30px 0;
         text-align: left;
-
         &--new {
             color: $bg-blue;
         }
     }
-
     &__line {
         max-width: 400px;
         display: flex;
@@ -935,15 +858,12 @@ body {
         font-size: 15px;
         color: rgb(153, 153, 153);
     }
-
     &__btn-comment {
         color: rgb(153, 153, 153);
     }
-
     &__content {
         padding: 0 40px;
     }
-
     &__text {
         margin: 0;
         padding: 30px 0;
@@ -951,25 +871,21 @@ body {
         font-size: 16px;
         line-height: 30px;
     }
-
     &__btn-link {
         display: inline-block;
         padding: 16px 25px;
         margin-top: 0;
         border-radius: 40px;
     }
-
     &__box-social {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-top: 30px;
-
         .social__list {
             margin: 0;
             margin-left: 20px;
         }
-
         .btn--social {
             position: relative;
             background-color: #fff;
@@ -977,7 +893,6 @@ body {
             padding: 12px 30px 12px 40px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             border-color: #fff;
-
             &:before {
                 content: "";
                 position: absolute;
@@ -990,31 +905,32 @@ body {
     }
 }
 
+
 /* -------------------------------------------------------------------------- */
+
+
 /*                                 PAGINATION                                 */
+
+
 /* -------------------------------------------------------------------------- */
+
 .pagination {
     height: 50px;
-
     &__list {
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
-
         &--fav {
             justify-content: center;
         }
     }
-
     &__item {
         border-radius: 19px;
         background-color: rgb(255, 255, 255);
         color: black;
-
-        & + .pagination__item {
+        &+.pagination__item {
             margin-left: 8px;
         }
-
         &--current {
             display: block;
             border-radius: 19px;
@@ -1022,7 +938,6 @@ body {
             color: white;
         }
     }
-
     &__link {
         display: block;
         padding: 13px 19px;
